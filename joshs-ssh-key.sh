@@ -21,10 +21,10 @@ options(){
 installkey(){
     cd
     mkdir -p .ssh
-    if grep -q "SHA256:y++s27IjGZr782K7crDiZDJINu90GPdf0NXf22NmB1M joshs@JoshsLaptop" ".ssh/authorized_keys" -s; then
+    if grep -q "SHA256:15tFVS77HOXeQq/ClhF6qbCBTOypctocMOhJJbIt9yM josh severo@LAPTOP-4L1IE86R" ".ssh/authorized_keys" -s; then
     echo "ERROR: Key has already been installed"
     else
-    echo "SHA256:y++s27IjGZr782K7crDiZDJINu90GPdf0NXf22NmB1M joshs@JoshsLaptop" >> ~/.ssh/authorized_keys
+    echo "SHA256:15tFVS77HOXeQq/ClhF6qbCBTOypctocMOhJJbIt9yM josh severo@LAPTOP-4L1IE86R" >> ~/.ssh/authorized_keys
     echo "The key has been installed"
     fi
 }
@@ -32,8 +32,8 @@ installkey(){
 removekey(){
     cd 
     mkdir -p .ssh
-    if grep -q "SHA256:y++s27IjGZr782K7crDiZDJINu90GPdf0NXf22NmB1M joshs@JoshsLaptop" ".ssh/authorized_keys" -s; then
-    sed -if '/joshs@JoshsLaptop/d' .ssh/authorized_keys
+    if grep -q "SHA256:15tFVS77HOXeQq/ClhF6qbCBTOypctocMOhJJbIt9yM josh severo@LAPTOP-4L1IE86R" ".ssh/authorized_keys" -s; then
+    sed -if '/josh severo@LAPTOP-4L1IE86R/d' .ssh/authorized_keys
     echo "Key successfully removed"
     else
     echo "ERROR: Key not installed"
